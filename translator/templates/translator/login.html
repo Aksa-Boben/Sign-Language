@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Signora</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Login</button>
+            </form>
+            <a href="{% url 'translator:register' %}">Don't have an account? Register</a>
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        {% if 'error' in message.tags %}  {# Show only error messages #}
+                            <p style="color: red;">{{ message }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>    
+</body>
+</html>

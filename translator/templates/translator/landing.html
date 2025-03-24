@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signora</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Welcome to</h1>
+        <h1 class="brand-name">SIGNORA</h1>
+        <p class="tagline">Giving Voice To Silent Expressions</p>
+
+        <div class="buttons">
+            <a href="{% url 'translator:login' %}" class="btn">Login</a>
+            <a href="{% url 'translator:register' %}" class="btn">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

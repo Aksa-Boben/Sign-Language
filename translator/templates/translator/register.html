@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Signora</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-container">
+            <h2>Register</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username" title="Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.">
+                <input type="email" name="email" placeholder="Email" title="Enter a valid email address">
+                <input type="password" name="password1" placeholder="Password" title="Your password must contain at least 8 characters, cannot be common, and must not be entirely numeric.">
+                <input type="password" name="password2" placeholder="Confirm Password" title="Re-enter the same password for verification.">
+                <button type="submit">Register</button>
+            </form>
+            <a href="{% url 'translator:login' %}">Already have an account? Login</a>
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <p style="color: red;">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
