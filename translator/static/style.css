@@ -1,0 +1,155 @@
+/* Apply font styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recoleta:wght@700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('/static/image.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Styling for container */
+.container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Styling for headings */
+.heading {
+    color: #423e32;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0px;  /* Remove extra gap */
+    line-height: 1.2;  /* Adjust line spacing */
+}
+
+.brand-name {
+    font-family: 'Recoleta', sans-serif; /* Apply Recoleta font */
+    color: #423e32;
+    font-size: 75px;
+    font-weight: bold;
+    margin-top: -10px;  /* Reduce gap between lines */
+}
+
+.tagline {
+    color: #45433e;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px; /* Reduce space below the brand name */
+}
+
+/* Styling for buttons */
+.buttons .btn, .btn {
+    background: blue;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons .btn:hover, .btn:hover {
+    background: darkblue;
+}
+
+/* Logout button specific styling */
+.logout-btn {
+    background: red;
+}
+
+.logout-btn:hover {
+    background: darkred;
+}
+
+/* Home page specific styles */
+.home-page {
+    /*background: url('/static/image.png') no-repeat center center fixed;*/
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Form container for login and register pages */
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    color: black;
+}
+
+/* Centering form container */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling form input fields */
+/* Styling for form input fields */
+form input {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+/* Show tooltip on hover */
+form input:hover {
+    border-color: blue;
+}
+
+/* Tooltip effect */
+form input::placeholder {
+    opacity: 0.7;
+}
+
+/* Styling form buttons */
+form button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: darkblue;
+}
+
+/* Styling links in forms */
+form a {
+    display: block;
+    margin-top: 10px;
+    color: blue;
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
